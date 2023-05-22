@@ -4,6 +4,12 @@ from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
 
+def show(img):
+  some_digit_image=img.reshape(28,28)
+  plt.imshow(some_digit_image, cmap=matplotlib.cm.binary,interpolation='nearest')
+  plt.axis("off")
+  plt.show()
+
 def pred_svc(img_array, plot):
   img_pil = Image.fromarray(img_array)
   img_28x28 = np.array(img_pil.resize((28, 28), Image.ANTIALIAS))
