@@ -1,5 +1,4 @@
 from models import svc, neigh, tree, clf, model
-from google.colab.patches import cv2_imshow
 from PIL import Image
 import numpy as np
 import matplotlib.pyplot as plt
@@ -96,4 +95,4 @@ def recognise(img,plot):
         cv2.putText(result, str(c), (x+w//2-2, y-10),
                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 3)
         print("x,y,w,h:", x, y, w, h, c)
-    cv2_imshow(result)
+    cv2.imshow(result)
