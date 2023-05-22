@@ -7,9 +7,15 @@ In computer technology and artificial intelligence, machine learning and deep le
 The handwritten digit recognition is the ability of computers to recognize human handwritten digits. Because handwritten digits are not perfect and can be generated with a variety of tastes, it is a difficult assignment for the machine. The solution to this problem is handwritten digit recognition, which uses an image of a digit to recognise the digit present in the image.
 
 Handwritten digit recognition with a classifier offers a wide range of applications and uses, including online digit recognition on PC tablets, recognising zip codes on mail, processing bank check amounts, and numeric sections in structures filled out by hand (such as tax forms), , identifying number plates of vehicles and so on.
+
+## Demo
+
+To see the demo go [here](https://r0h1t.pythonanywhere.com)
+
 ## Dataset
 
 We used MNIST Datset. MNIST is Set of 70,000 small images of digits handwritten by high school students and employees of the US causes Bureau.​
+
 - All images are labeled with the respective digit they represent.​
 - MNIST is the hello world of machine learning. Every time a data scientist or machine learning engineer makes a new algorithm for classification, they would always first check its performance on the MNIST dataset.​
 - There are 70,000 images and each image has 28*28 = 784 features.​
@@ -21,41 +27,28 @@ This project presents recognizing the handwritten digits (0 to 9) from the famou
 
 We have used KNN and SVM to create the models. We tried different techinques like Linear regression, Descision Tree, Naive Bayes too, But KNN and SVM were the most accurate so we used it for the final predictions
 
-**Sample Input**
+#### Sample Input
 
 <img src="content/test.png" width="732" height="390">
 
 First we will Identify the objects using opencv's contour finding method and will draw a rectangle around the object. It will then pass the image to the model to predict the number and the number is also shown above the rectangle.
 
-**Sample output**
+#### Sample output
 
 <img src="content/result.jfif" width="732" height="390">
 
 ## How to run it
-
-To run it you need to install these packages:
-```bash
-sudo apt update
-sudo apt-get install python3-pip
-pip3 install --upgrade pip
-
-pip3 install numpy
-pip3 install scipy
-pip3 install sklearn
-pip3 install opencv-python
-pip3 install Pillow
-```
 
 To run it do the following:
 
 ```bash
 git clone https://github.com/RohitNarayananM/Handwritten_Digit_Recognition
 cd Handwritten_Digit_Recognition
+pip3 install -r requirements.txt
 python3 main.py
 ```
 
 To predict on your images add the path to your images in the main.py file and run it.
-
 
 ## Refferences
 
